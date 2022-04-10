@@ -13,10 +13,10 @@ def process_data_histone(df, res_folder):
     df[['chr', 'pos', 'strand', 'ref', 'alt']].to_csv('{}/snps_histone'.format(res_folder), sep='\t', index=False,
                                                    header=False)
 
-    subprocess.Popen(
-        "/Users/ywang17/workspace/samtools/samtools-1.15.1/bin/samtools faidx genome.fa -r {}/bed_histone -o {}/seq_histone".format(
+    exit_code = subprocess.Popen(
+        "samtools faidx genome.fa -r {}/bed_histone -o {}/seq_histone".format(
             res_folder, res_folder), shell=True, stdout=subprocess.PIPE).stdout.read()
-
+    print(exit_code)
     code_ =['A','C','G','T','R','Y','S','W','K','M']
     code = {
                     #              A, C, G, T
@@ -93,11 +93,11 @@ def process_data_methy(df, res_folder):
     df['bed'].to_csv('{}/bed_methy'.format(res_folder), sep='\t', index=False, header=False)
     df[['chr', 'pos', 'strand', 'ref', 'alt']].to_csv('{}/snps_methy'.format(res_folder), sep='\t', index=False,
                                                       header=False)
-    subprocess.Popen(
-        "/Users/ywang17/workspace/samtools/samtools-1.15.1/bin/samtools faidx genome.fa -r {}/bed_methy -o {}/seq_methy".format(
+    exit_code = subprocess.Popen(
+        "samtools faidx genome.fa -r {}/bed_methy -o {}/seq_methy".format(
             res_folder, res_folder), shell=True, stdout=subprocess.PIPE).stdout.read()
 
-
+    print(exit_code)
 
     code_ =['A','C','G','T','R','Y','S','W','K','M']
     code = {
