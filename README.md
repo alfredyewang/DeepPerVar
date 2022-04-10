@@ -67,7 +67,7 @@ DeepPerVar takes UCSC Genome Browser BED file. Each line has 5 tab separated fie
 - The first column: Chromosome name (hg19).
 - The second column: Position of SNPs (hg19).
 - The third column: The strand information.
-- The forth column: reference allele.
+- The fourth column: reference allele.
 - The fifth column: alternative allele.
 
 ### H3K9 Example
@@ -76,7 +76,6 @@ python3 src/DeepPerVar.py --prediction --epigenomics H3K9 --bed data/snps.bed --
 ```
 Results will be save into res/Results_histone.csv
 ```
-
 chr	pos	strand	ref	alt	H3K9AC_REF_Pred	H3K9AC_ALT_Pred	DELTA_H3K9AC
 1	1265154	-	T	C	18.415241	18.509096	0.093854904
 1	1265460	-	T	A	17.707266	17.64615	-0.061115265
