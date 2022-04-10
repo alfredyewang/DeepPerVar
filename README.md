@@ -23,8 +23,6 @@ DeepPerVar is implemented by Python3.
 - pytorch ==1.7.1
 - biopython=1.19.2
 
-Install Samtools 1.15.1 follow the (instruction)[http://www.htslib.org/download/].
-
 Download [Reference Genome (hg19)](https://drive.google.com/file/d/1X5PdUzaSVMKAkzysrv9kVtBbU3VGCkgF/view?usp=sharing), [DeepPerVar Models](https://drive.google.com/file/d/1Q_EzL_R4MLHSPYXKIqGUeXkDNx1yJ4WB/view?usp=sharing)
 
 ```
@@ -35,10 +33,14 @@ Download DeepPerVar:
 ```
 git clone https://github.com/alfredyewang/DeepPerVar
 ```
-Install requirements, samtools can be downloaded and installed from [link](http://www.htslib.org/download/).
+Install requirements.
 ```
 pip3 install -r requirements --user
 ```
+
+Install Samtools 1.15.1 follow the (instruction)[http://www.htslib.org/download/] .
+
+
 ## Usage
 You can see the input arguments for DeepPerVar by help option:
 
@@ -66,4 +68,24 @@ DeepPerVar takes UCSC Genome Browser BED file. Each line has 5 tab separated fie
 - The second column: Position of SNPs (hg19).
 - The third column: The strand information.
 - The forth column: reference allele.
-- The fith column: alternative allele.
+- The fifth column: alternative allele.
+
+### H3K9 Example
+```
+python3 src/DeepPerVar.py --prediction --epigenomics H3K9 --bed data/snps.bed --res_dir res --model_dir models
+```
+Results will be save into res/Results_histone.csv
+```
+
+chr	pos	strand	ref	alt	H3K9AC_REF_Pred	H3K9AC_ALT_Pred	DELTA_H3K9AC
+1	1265154	-	T	C	18.415241	18.509096	0.093854904
+1	1265460	-	T	A	17.707266	17.64615	-0.061115265
+1	2957600	-	T	C	10.322433	10.464524	0.1420908
+1	3691528	-	A	G	16.85876	16.950903	0.092142105
+1	8021919	-	C	G	82.27526	82.20313	-0.072128296
+1	8939842	-	G	A	42.205887	42.33795	0.13206482
+1	10457540	-	T	C	13.674403	13.556186	-0.11821747
+1	11072117	-	C	T	57.86567	56.590023	-1.2756462
+1	11072691	-	G	A	37.507782	37.999027	0.49124527
+1	11083408	-	G	A	16.937225	15.624798	-1.3124275
+```
