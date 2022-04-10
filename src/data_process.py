@@ -16,7 +16,8 @@ def process_data_histone(df, res_folder):
     exit_code = subprocess.Popen(
         "samtools faidx genome.fa -r {}/bed_histone -o {}/seq_histone".format(
             res_folder, res_folder), shell=True, stdout=subprocess.PIPE).stdout.read()
-    print(exit_code)
+    if str(exit_code, 'utf-8') != '':
+        print(str(exit_code, 'utf-8'))
     code_ =['A','C','G','T','R','Y','S','W','K','M']
     code = {
                     #              A, C, G, T
@@ -96,8 +97,8 @@ def process_data_methy(df, res_folder):
     exit_code = subprocess.Popen(
         "samtools faidx genome.fa -r {}/bed_methy -o {}/seq_methy".format(
             res_folder, res_folder), shell=True, stdout=subprocess.PIPE).stdout.read()
-
-    print(exit_code)
+    if str(exit_code,'utf-8')!='':
+        print(str(exit_code,'utf-8'))
 
     code_ =['A','C','G','T','R','Y','S','W','K','M']
     code = {
