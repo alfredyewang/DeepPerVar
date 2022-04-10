@@ -18,6 +18,7 @@ def process_data_histone(df, res_folder):
             res_folder, res_folder), shell=True, stdout=subprocess.PIPE).stdout.read()
     if str(exit_code, 'utf-8') != '':
         print(str(exit_code, 'utf-8'))
+        exit(1)
     code_ =['A','C','G','T','R','Y','S','W','K','M']
     code = {
                     #              A, C, G, T
@@ -99,6 +100,8 @@ def process_data_methy(df, res_folder):
             res_folder, res_folder), shell=True, stdout=subprocess.PIPE).stdout.read()
     if str(exit_code,'utf-8')!='':
         print(str(exit_code,'utf-8'))
+        exit(1)
+
 
     code_ =['A','C','G','T','R','Y','S','W','K','M']
     code = {
