@@ -24,7 +24,7 @@ DeepPerVar is implemented by Python3.
 - pytorch ==1.7.1
 - biopython=1.19.2
 
-Download [Reference Genome (hg19)]() [DeepPerVar Models](https://drive.google.com/file/d/1Q_EzL_R4MLHSPYXKIqGUeXkDNx1yJ4WB/view?usp=sharing)
+Download [Reference Genome (hg19)](https://drive.google.com/file/d/1X5PdUzaSVMKAkzysrv9kVtBbU3VGCkgF/view?usp=sharing) [DeepPerVar Models](https://drive.google.com/file/d/1Q_EzL_R4MLHSPYXKIqGUeXkDNx1yJ4WB/view?usp=sharing)
 
 ```
 unzip Models.zip Genomes.zip
@@ -34,10 +34,10 @@ Download DeepPerVar:
 ```
 git clone https://github.com/alfredyewang/DeepPerVar
 ```
-Install requirements, samtools can be downloaded and installed from (link)[http://www.htslib.org/download/]
+Install requirements, samtools can be downloaded and installed from [link](http://www.htslib.org/download/).
 ```
 pip3 install -r requirements --user
-
+```
 ## Usage
 You can see the input arguments for DeepPerVar by help option:
 
@@ -56,7 +56,6 @@ optional arguments:
                         The model directory for DeepPerVar
   --res_dir <data_directory>
                         The data directory for save results
-
 ```
 
 ### Input File Format
