@@ -18,12 +18,11 @@ We implement a webserver to predict genome-wide H3K9ac signals and DNA methylati
 DeepPerVar is implemented by Python3.
 
 - Python 3.8
-- hdf5 == 1.10.4
 - numpy >= 1.18.5
 - pytorch ==1.7.1
 - biopython=1.19.2
 
-Download [Reference Genome (hg19)](https://drive.google.com/file/d/1X5PdUzaSVMKAkzysrv9kVtBbU3VGCkgF/view?usp=sharing), and put them in the DeepPerVar root directory. Download [DeepPerVar Models](https://drive.google.com/file/d/1Q_EzL_R4MLHSPYXKIqGUeXkDNx1yJ4WB/view?usp=sharing), and put model files in models directory. 
+Download [Reference Genome (hg19)](https://drive.google.com/file/d/1X5PdUzaSVMKAkzysrv9kVtBbU3VGCkgF/view?usp=sharing), and put them in the DeepPerVar root directory. Download [DeepPerVar Models](https://drive.google.com/file/d/1Q_EzL_R4MLHSPYXKIqGUeXkDNx1yJ4WB/view?usp=sharing), and put model files in models directory.
 
 ```
 unzip Models.zip Reference.zip
