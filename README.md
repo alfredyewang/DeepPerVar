@@ -4,7 +4,7 @@ By leveraging paired whole genome sequencing data and epigenetic functional assa
 
 <center>
 
-<div align=center><img width="800" height="500" src="https://raw.githubusercontent.com/alfredyewang/DeepPerVar/main/src/DeepPerVar.jpeg"/></div>
+<div align=center><img width="800" height="500" src="https://raw.githubusercontent.com/alfredyewang/DeepPerVar/main/doc/DeepPerVar.jpeg"/></div>
 </center>  
 
 
@@ -22,17 +22,42 @@ DeepPerVar is implemented by Python3.
 - hdf5 == 1.10.4
 - numpy >= 1.18.5
 - pytorch ==1.7.1
+- biopython=1.19.2
 
-Download [Reference Genome (hg19)]() [DeepPerVar Models] (https://drive.google.com/file/d/1Q_EzL_R4MLHSPYXKIqGUeXkDNx1yJ4WB/view?usp=sharing)
+Download [Reference Genome (hg19)]() [DeepPerVar Models](https://drive.google.com/file/d/1Q_EzL_R4MLHSPYXKIqGUeXkDNx1yJ4WB/view?usp=sharing)
 
 ```
-unzip Base.zip
+unzip Models.zip Genomes.zip
 ```
 
 Download DeepPerVar:
 ```
 git clone https://github.com/alfredyewang/DeepPerVar
 ```
-Install requirements
+Install requirements, samtools can be downloaded and installed from (link)[http://www.htslib.org/download/]
 ```
 pip3 install -r requirements --user
+
+## Usage
+You can see the input arguments for DeepPerVar by help option:
+
+```
+usage: DeepPerVar.py [-h] [--prediction] [--epigenomics EPIGENOMICS] [--bed BED] [--model_dir <data_directory>] [--res_dir <data_directory>]
+
+DeepPerVar: a multimodal deep learning framework for functional interpretation of genetic variants in personal genome
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --prediction          Use this option for predict DeepPerVar score
+  --epigenomics EPIGENOMICS
+                        Epigenetics, can be H3K9 or DNA_methylation
+  --bed BED             The Bed file for predicts epigenetics and mutation effects
+  --model_dir <data_directory>
+                        The model directory for DeepPerVar
+  --res_dir <data_directory>
+                        The data directory for save results
+
+```
+
+### Input File Format
+WEVar takes UCSC Genome Browser BED file. The BED fields are:
