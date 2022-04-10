@@ -18,16 +18,17 @@ We implement a webserver to predict genome-wide H3K9ac signals and DNA methylati
 DeepPerVar is implemented by Python3.
 
 - Python 3.8
-- samtools 1.15.1
 - hdf5 == 1.10.4
 - numpy >= 1.18.5
 - pytorch ==1.7.1
 - biopython=1.19.2
 
-Download [Reference Genome (hg19)](https://drive.google.com/file/d/1X5PdUzaSVMKAkzysrv9kVtBbU3VGCkgF/view?usp=sharing) [DeepPerVar Models](https://drive.google.com/file/d/1Q_EzL_R4MLHSPYXKIqGUeXkDNx1yJ4WB/view?usp=sharing)
+Install Samtools 1.15.1 follow the (instruction)[http://www.htslib.org/download/].
+
+Download [Reference Genome (hg19)](https://drive.google.com/file/d/1X5PdUzaSVMKAkzysrv9kVtBbU3VGCkgF/view?usp=sharing), [DeepPerVar Models](https://drive.google.com/file/d/1Q_EzL_R4MLHSPYXKIqGUeXkDNx1yJ4WB/view?usp=sharing)
 
 ```
-unzip Models.zip Genomes.zip
+unzip Models.zip References.zip
 ```
 
 Download DeepPerVar:
