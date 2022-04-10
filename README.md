@@ -8,7 +8,7 @@ By leveraging paired whole genome sequencing data and epigenetic functional assa
 </center>  
 
 
-## DeepPerVar
+## DeepPerVar Webserver
 
 We implement a webserver to predict genome-wide H3K9ac signals and DNA methylation ratio and the mutation effect on these two epigenetics signals. The webserver can be accessed from [link](http://35.202.146.70/). <br />
 <br />
@@ -59,4 +59,10 @@ optional arguments:
 ```
 
 ### Input File Format
-WEVar takes UCSC Genome Browser BED file. The BED fields are:
+DeepPerVar takes UCSC Genome Browser BED file. Each line has 5 tab separated fields. The BED fields are:
+
+- The first column: Chromosome name (hg19).
+- The second column: Position of SNPs (hg19).
+- The third column: The strand information.
+- The forth column: reference allele.
+- The fith column: alternative allele.
