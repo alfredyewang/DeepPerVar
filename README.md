@@ -4,5 +4,5 @@ By leveraging paired whole genome sequencing data and epigenetic functional assa
 
 <center>
 
-<div align=center><img width="800" height="300" src="https://raw.githubusercontent.com/alfredyewang/DeepPerVar/main/src/DeepPerVar.jpeg"/></div>
+<div align=center><img width="800" height="400" src="https://raw.githubusercontent.com/alfredyewang/DeepPerVar/main/src/DeepPerVar.jpeg"/></div>
 </center>  
