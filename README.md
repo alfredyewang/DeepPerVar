@@ -23,10 +23,10 @@ DeepPerVar is implemented by Python3.
 - pytorch ==1.7.1
 - biopython=1.19.2
 
-Download [Reference Genome (hg19)](https://drive.google.com/file/d/1X5PdUzaSVMKAkzysrv9kVtBbU3VGCkgF/view?usp=sharing), [DeepPerVar Models](https://drive.google.com/file/d/1Q_EzL_R4MLHSPYXKIqGUeXkDNx1yJ4WB/view?usp=sharing)
+Download [Reference Genome (hg19)](https://drive.google.com/file/d/1X5PdUzaSVMKAkzysrv9kVtBbU3VGCkgF/view?usp=sharing), and put them in the DeepPerVar root directory. Download [DeepPerVar Models](https://drive.google.com/file/d/1Q_EzL_R4MLHSPYXKIqGUeXkDNx1yJ4WB/view?usp=sharing), and put model files in models directory. 
 
 ```
-unzip Models.zip References.zip
+unzip Models.zip Reference.zip
 ```
 
 Download DeepPerVar:
