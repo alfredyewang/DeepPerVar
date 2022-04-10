@@ -10,7 +10,7 @@ By leveraging paired whole genome sequencing data and epigenetic functional assa
 
 ## DeepPerVar
 
-We implement a webserver to predict genome-wide H3K9ac signals and DNA methylation ratio and the mutation effect on these two epigenetics signals. The webserver can be accessed from [link].(http://35.202.146.70/). <br />
+We implement a webserver to predict genome-wide H3K9ac signals and DNA methylation ratio and the mutation effect on these two epigenetics signals. The webserver can be accessed from [link](http://35.202.146.70/). <br />
 <br />
 
 ## Requirements and Installation
